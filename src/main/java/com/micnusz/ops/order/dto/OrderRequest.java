@@ -6,6 +6,7 @@ import com.micnusz.ops.order.enums.OrderStatus;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jdk.jfr.Timestamp;
 import lombok.*;
 
@@ -18,14 +19,13 @@ import java.util.List;
 @Builder
 public class OrderRequest {
 
-    @Enumerated(EnumType.STRING)
     OrderStatus status;
 
     @NotBlank
-    String title;
+    private String title;
 
-    @Timestamp
-    Instant timestamp;
+    @NotNull
+    private Instant timestamp;
 
-    List<ItemEnvelope> items;
+    private List<ItemEnvelope> items;
 }
