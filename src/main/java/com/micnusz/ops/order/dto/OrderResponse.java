@@ -7,12 +7,11 @@ import java.time.Instant;
 import java.util.UUID;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class OrderResponse {
-
-    UUID orderId;
-    OrderStatus status;
-    Instant timestamp;
+    private UUID orderId;
+    private OrderStatus status;
+    private Instant createdAt;
 }
