@@ -1,4 +1,4 @@
-package com.micnusz.ops.order.exception;
+package com.micnusz.ops.exception;
 
 import java.util.UUID;
 
